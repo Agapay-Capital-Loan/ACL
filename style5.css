@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base styles */
+
+
+html, body {
+    height: 250%; /* Ensure the body and html take up full height */
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #f5f7fa;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure body is at least as tall as the viewport */
+    overflow-y: auto;
+}
+
+/* Content Area */
+.main-content {
+    flex-grow: 1; /* Allows the content to take up remaining space */
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px; /* Fixed max-width for the container */
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow wrapping for small screens */
+}
+
+/* Header */
+header {
+    background-color: #003366;
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 15px 0;
+    transition: top 0.3s;
+    display: flex;
+    z-index: 1000;
+    justify-content: space-between; /* Distribute elements across the header */
+    align-items: center; /* Align items vertically */
+    height: 80px; /* Set a fixed height for the header */
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center; /* Ensure vertical alignment */
+}
+
+    .logo img {
+        height: 120px; /* Set the logo height to 120px */
+        width: auto;
+        transition: height 0.3s ease; /* Smooth transition when resizing the logo */
+    }
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+    }
+/* Centered Text Container */
+.text-container {
+    margin-top: 120px; /* Para hindi matakpan ng fixed header */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    gap: 15px;
+}
+
+    /* Main Title */
+    .text-container h1 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #003366;
+        margin-bottom: 20px;
+    }
+
+    /* Subtitle */
+    .text-container h2 {
+        color: #003366;
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+        text-align:left;
+    }
+   
+    .text-container h3 {
+        color: #003366;
+       
+    }
+
+    /* Paragraph Styling */
+    .text-container p {
+        font-size: 1.2rem;
+        color: #333;
+        text-align:center;
+    }
+
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+    margin-top: auto; /* Pushes the footer to the bottom */
+}

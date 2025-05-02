@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Loan Application</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            height: 100%;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f5f7fa;
+        }
+
+        header {
+            background-color: #003366;
+            color: white;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 15px 0;
+            z-index: 1000;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+            .logo img {
+                height: 120px;
+                width: auto;
+            }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+            nav ul li a {
+                color: white;
+                text-decoration: none;
+                font-weight: 600;
+            }
+
+        .search-fb {
+            display: flex;
+            align-items: center;
+        }
+
+            .search-fb input {
+                padding: 5px 10px;
+                border: none;
+                border-radius: 5px;
+            }
+
+            .search-fb img {
+                width: 54px;
+                height: 50px;
+            }
+
+        .main-content {
+            padding-top: 180px; /* Enough space for fixed header + logo */
+        }
+
+        .header2 {
+            background-color: #00a88e;
+            color: white;
+            text-align: center;
+            padding: 40px 20px 20px;
+        }
+
+            .header2 h1 {
+                font-size: 2.5rem;
+                margin: 0;
+            }
+
+            .header2 p {
+                font-size: 1.1rem;
+                margin: 5px 0 0;
+            }
+
+        .form-container {
+            background-color: #e0e0e0;
+            width: 90%;
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .steps {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .step {
+            font-weight: bold;
+            color: #555;
+            font-size: 0.9rem;
+        }
+
+            .step.active {
+                color: #00a88e;
+            }
+
+        .form-row {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+            .form-row select,
+            .form-row input {
+                flex: 1;
+            }
+
+        .form-container input,
+        .form-container select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .upload-field {
+            display: flex;
+            gap: 10px;
+        }
+
+        .upload-box {
+            flex: 0.5;
+            background-color: white;
+            border: 1px dashed #ccc;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        .next-btn {
+            background-color: #00a88e;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <header id="header1">
+        <div class="container">
+            <div class="logo">
+                <img src="LOGOCH.png" alt="Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Financial Literacy Hub</a></li>
+                    <li><a href="#">Loan Calculator</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+           
+        </div>
+    </header>
+
+    <div class="main-content">
+        <div class="header2">
+            <h1>Loan Application</h1>
+            <p>Complete your application!</p>
+        </div>
+
+        <div class="form-container">
+            <div class="steps">
+                <div class="step active">1. Personal Information</div>
+            </div>
+
+            <div class="form-row">
+                <input type="text" placeholder="First Name *">
+                <input type="text" placeholder="Last Name *">
+            </div>
+
+            <div class="form-row">
+                <select>
+                    <option>Birth Month</option>
+                    <option>January</option>
+                    <option>February</option>
+                </select>
+                <select>
+                    <option>Day</option>
+                    <option>1</option>
+                    <option>2</option>
+                </select>
+                <select>
+                    <option>Year</option>
+                    <option>1990</option>
+                    <option>1991</option>
+                </select>
+            </div>
+
+            <input type="text" placeholder="Address">
+            <input type="email" placeholder="Email *">
+
+            <div class="upload-field">
+                <input type="text" placeholder="Phone *">
+                <div class="upload-box">Upload ID</div>
+            </div>
+
+            <button class="next-btn">Next</button>
+        </div>
+    </div>
+
+</body>
+</html>
