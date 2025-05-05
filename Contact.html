@@ -4,14 +4,6 @@
     <meta charset="UTF-8">
     <title>Contact Us</title>
     <link rel="stylesheet" href="style4.css">
-    <style>
-        /* Optional: Center the embedded Google Form */
-        .contact-section iframe {
-            display: block;
-            margin: 0 auto;
-            border: none;
-        }
-    </style>
 </head>
 <body>
     <header id="header">
@@ -36,7 +28,14 @@
     <main class="main-content">
         <section class="contact-section">
             <h2>Contact Us!</h2>
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfjkJc12Od2teGt6QJzvFhjqWmmebgrDV0ELrGj_EWkOaED4Q/viewform?embedded=true" width="640" height="940" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            <form class="contact-form">
+                <div class="form-row">
+                    <input type="text" placeholder="Name" required>
+                    <input type="email" placeholder="Email" required>
+                </div>
+                <textarea placeholder="Type your message here..." required></textarea>
+                <button type="submit">Submit</button>
+            </form>
         </section>
 
         <footer class="contact-footer">
@@ -55,6 +54,8 @@
                 </div>
             </div>
         </footer>
+
     </main>
 </body>
 </html>
+is it posible that if i submit a message mapupunta sya sa gmail Sa github nga pala to btw eto yung link https://agapay-capital-loan.github.io/ACL/Contact.html
