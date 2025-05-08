@@ -83,7 +83,7 @@
             const termMonths = parseInt(termSlider.value);
             const interestRate = 0.08;
 
-            const monthlyRate = interestRate / 12;
+            const monthlyRate = interestRate / 4;
             const monthlyPayment = (amount * monthlyRate) / (1 - Math.pow(1 + monthlyRate, -termMonths));
             const totalPayment = monthlyPayment * termMonths;
             const totalInterest = totalPayment - amount;
