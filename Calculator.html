@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
@@ -24,7 +24,6 @@
                     <li><a href="Contact.html">Contact Us</a></li>
                 </ul>
             </nav>
-
         </div>
     </header>
 
@@ -56,8 +55,10 @@
             <p><strong>Monthly Payment:</strong> <span id="monthly">—</span></p>
             <p><strong>Total Payment:</strong> <span id="total">—</span></p>
             <p><strong>Interest:</strong> <span id="interest">—</span></p>
+            <p><strong>Interest Rate:</strong> <span id="interest-rate">—</span></p> <!-- Added Interest Rate -->
         </div>
     </div>
+
     <footer>
         <div class="container">
             <p>Agapay Capital Loans 2025 . All rights reserved.</p>
@@ -81,16 +82,18 @@
         function calculateLoan() {
             const amount = parseFloat(amountSlider.value);
             const termMonths = parseInt(termSlider.value);
-            const interestRate = 0.03;
+            const interestRate = 0.03;  // 3% annual interest rate
 
             const monthlyRate = interestRate / 12;
             const monthlyPayment = (amount * monthlyRate) / (1 - Math.pow(1 + monthlyRate, -termMonths));
             const totalPayment = monthlyPayment * termMonths;
             const totalInterest = totalPayment - amount;
 
+            // Update the results with the new interest rate and calculations
             document.getElementById("monthly").textContent = `₱${monthlyPayment.toFixed(2).toLocaleString()}`;
             document.getElementById("total").textContent = `₱${totalPayment.toFixed(2).toLocaleString()}`;
             document.getElementById("interest").textContent = `₱${totalInterest.toFixed(2).toLocaleString()}`;
+            document.getElementById("interest-rate").textContent = `${(interestRate * 100).toFixed(0)}%`; // Display interest rate as 3%
         }
 
         document.addEventListener("DOMContentLoaded", () => {
